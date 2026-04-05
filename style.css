@@ -70,6 +70,43 @@ section {
   opacity: 0.8;
 }
 
+
+.home-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* LEFT SIDE - IMAGE */
+.home-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* RIGHT SIDE - TEXT */
+.home-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+}
+
+/* Image style */
+.profile-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+
+
+
+
+
 /* Profile image */
 .profile-img {
   width: 150px;
