@@ -50,30 +50,15 @@ section {
   text-align: center;
 }
 
-/* Home section */
 #home {
-  padding-top: 140px;
+  padding-top: 100px;
 }
 
-#home h1 {
-  font-size: 40px;
-  margin-bottom: 10px;
-}
-
-#home h2 {
-  font-size: 25px;
-  color: #00bcd4;
-}
-
-#home p {
-  margin-top: 10px;
-  opacity: 0.8;
-}
-
-
+/* Home container */
 .home-container {
   display: flex;
-  height: 100vh;
+  min-height: 100vh; /* better than height */
+  align-items: center;
 }
 
 /* LEFT SIDE - IMAGE */
@@ -95,12 +80,12 @@ section {
 
 /* Image style */
 .profile-img {
-  width: 250px;
-  height: 250px;
+  width: 260px;
+  height: 260px;
   border-radius: 50%;
   object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
-
 
 
 
