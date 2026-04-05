@@ -1,7 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Yuresha Portfolio</title>
+
+  <!-- External CSS file -->
   <link rel="stylesheet" href="style.css">
 
   <!-- AOS Animation -->
@@ -13,74 +17,104 @@
 
 <body>
 
-<div id="particles-js"></div>  
+<!-- Particle Background -->
+<div id="particles-js"></div>
+
+<!-- Navbar -->
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
 <!-- Home -->
 <section id="home">
   <h1>Hi, I'm Yuresha 👋</h1>
-  <h2>I am <span id="typing"></span></h2>
+  <h2>I am a <span id="typing"></span></h2>
+  <p>QA Engineer Intern | Software Tester | Automation Learner</p>
 
-  <!-- Profile Image -->
-  <img src="profile.jpg" alt="My Profile Photo" class="profile-img">
+  <img src="profile.jpg" alt="Profile Image" class="profile-img">
 
-  <p>Welcome to my portfolio!</p>
+  <a href="#projects" class="btn">View My Work</a>
 </section>
 
 <!-- About -->
 <section id="about" data-aos="fade-up">
   <h2>About Me</h2>
-  <p>I am passionate about software testing and QA engineering.</p>
+  <p>
+    I am passionate about software testing and QA engineering.
+    I love finding bugs and improving software quality.
+  </p>
 </section>
 
 <!-- Skills -->
 <section id="skills" data-aos="zoom-in">
   <h2>Skills</h2>
-  <div class="card">
-    <p>JavaScript</p>
-    <p>Manual Testing</p>
-    <p>Selenium</p>
-  </div>
+  <ul>
+    <li>JavaScript</li>
+    <li>Manual Testing</li>
+    <li>Selenium Basics</li>
+    <li>Git & GitHub</li>
+  </ul>
 </section>
 
 <!-- Projects -->
 <section id="projects" data-aos="fade-right">
   <h2>Projects</h2>
-  <div class="card">
-    <p>Testing Web Application</p>
+
+  <div class="project">
+    <h3>QA Testing Project</h3>
+    <p>Created test cases and bug reports for a sample web application.</p>
+  </div>
+
+  <div class="project">
+    <h3>Portfolio Website</h3>
+    <p>Built using HTML, CSS, and JavaScript.</p>
   </div>
 </section>
 
 <!-- Contact -->
 <section id="contact" data-aos="fade-up">
-  <h2>Contact</h2>
+  <h2>Contact Me</h2>
   <p>Email: yuresharavihansi644@gmail.com</p>
+  <p>GitHub: github.com/yourprofile</p>
 </section>
 
 <!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  // AOS animation
   AOS.init();
 
-  var typed = new Typed("#typing", {
+  // Typed text animation
+  new Typed("#typing", {
     strings: ["QA Engineer", "Software Tester", "Automation Tester"],
     typeSpeed: 50,
     backSpeed: 30,
     loop: true
   });
-</script>
-<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-<script>
-particlesJS("particles-js", {
-  particles: {
-    number: { value: 80 },
-    size: { value: 3 },
-    move: { speed: 2 },
-    line_linked: {
-      enable: true,
-      distance: 150
+
+  // Particle background
+  particlesJS("particles-js", {
+    particles: {
+      number: { value: 80 },
+      size: { value: 3 },
+      move: { speed: 2 },
+      line_linked: {
+        enable: true,
+        distance: 150
+      }
     }
-  }
+  });
+
 });
 </script>
+
 </body>
 </html>
