@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Yuresha Portfolio</title>
 
-  <!-- External CSS file -->
   <link rel="stylesheet" href="style.css">
 
   <!-- AOS Animation -->
@@ -17,7 +16,7 @@
 
 <body>
 
-<!-- Particle Background -->
+<!-- Particles Background -->
 <div id="particles-js"></div>
 
 <!-- Navbar -->
@@ -58,22 +57,24 @@
 <!-- Skills -->
 <section id="skills" data-aos="zoom-in">
   <h2>Skills</h2>
- <ul>
-  <li>Manual Testing (Test Cases, Bug Reporting)</li>
-  <li>Selenium WebDriver (Basic Automation)</li>
-  <li>Java (Basics)</li>
-  <li>Git & GitHub</li>
-  <li>SDLC & STLC Knowledge</li>
-</ul>
-  <section id="tools" data-aos="fade-left">
+  <ul>
+    <li>Manual Testing</li>
+    <li>Selenium WebDriver</li>
+    <li>Java Basics</li>
+    <li>Git & GitHub</li>
+    <li>SDLC & STLC</li>
+  </ul>
+</section>
+
+<!-- Tools -->
+<section id="tools" data-aos="fade-left">
   <h2>Tools & Technologies</h2>
   <ul>
     <li>Selenium</li>
-    <li>JIRA (Basic)</li>
-    <li>Postman (Basic API Testing)</li>
+    <li>JIRA</li>
+    <li>Postman</li>
     <li>Chrome DevTools</li>
   </ul>
-  </section>
 </section>
 
 <!-- Projects -->
@@ -81,14 +82,14 @@
   <h2>Projects</h2>
 
   <div class="project">
-  <h3>QA Testing Project</h3>
-  <p>
-    ✔ Created detailed test cases and test scenarios<br>
-    ✔ Performed manual testing on a web application<br>
-    ✔ Reported bugs using structured bug reports<br>
-    ✔ Practiced SDLC & STLC processes
-  </p>
-</div>
+    <h3>QA Testing Project</h3>
+    <p>
+      ✔ Created test cases<br>
+      ✔ Performed manual testing<br>
+      ✔ Reported bugs<br>
+      ✔ Followed SDLC & STLC
+    </p>
+  </div>
 
   <div class="project">
     <h3>Portfolio Website</h3>
@@ -100,7 +101,10 @@
 <section id="contact" data-aos="fade-up">
   <h2>Contact Me</h2>
   <p>Email: yuresharavihansi644@gmail.com</p>
-  <p>GitHub: <a href="https://github.com/yourprofile" target="_blank">Visit My GitHub</a></p>
+  <p>
+    GitHub:
+    <a href="https://github.com/" target="_blank">Visit My GitHub</a>
+  </p>
 </section>
 
 <!-- Scripts -->
@@ -110,10 +114,8 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-  // AOS animation
   AOS.init();
 
-  // Typed text animation
   new Typed("#typing", {
     strings: ["QA Engineer", "Software Tester", "Automation Tester"],
     typeSpeed: 50,
@@ -121,17 +123,33 @@ document.addEventListener("DOMContentLoaded", function () {
     loop: true
   });
 
-  // Particle background
   particlesJS("particles-js", {
     particles: {
-      number: { value: 80 },
-      size: { value: 2 },
-      move: { speed: 1 },
+      number: { value: 60, density: { enable: true, value_area: 800 } },
+      color: { value: ["#00e5ff", "#ff4dff", "#00ff85", "#ffd700"] },
+      shape: { type: "circle" },
+      opacity: { value: 0.7, random: true },
+      size: { value: 2, random: true },
       line_linked: {
         enable: true,
-        distance: 150
+        distance: 140,
+        color: "#ffffff",
+        opacity: 0.3,
+        width: 1
+      },
+      move: {
+        enable: true,
+        speed: 0.6,
+        out_mode: "out"
       }
-    }
+    },
+    interactivity: {
+      events: {
+        onhover: { enable: true, mode: "repulse" },
+        onclick: { enable: true, mode: "push" }
+      }
+    },
+    retina_detect: true
   });
 
 });
