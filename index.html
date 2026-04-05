@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Yuresha Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+
+<body>
+
+<!-- Home -->
+<section id="home">
+  <h1>Hi, I'm Yuresha 👋</h1>
+  <h2>I am <span id="typing"></span></h2>
+</section>
+
+<!-- About -->
+<section id="about" data-aos="fade-up">
+  <h2>About Me</h2>
+  <p>I am passionate about software testing and QA engineering.</p>
+</section>
+
+<!-- Skills -->
+<section id="skills" data-aos="zoom-in">
+  <h2>Skills</h2>
+  <div class="card">
+    <p>JavaScript</p>
+    <p>Manual Testing</p>
+    <p>Selenium</p>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" data-aos="fade-right">
+  <h2>Projects</h2>
+  <div class="card">
+    <p>Testing Web Application</p>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" data-aos="fade-up">
+  <h2>Contact</h2>
+  <p>Email: your@email.com</p>
+</section>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  AOS.init();
+
+  var typed = new Typed("#typing", {
+    strings: ["QA Engineer", "Software Tester", "Automation Tester"],
+    typeSpeed: 50,
+    backSpeed: 30,
+    loop: true
+  });
+</script>
+
+</body>
+</html>
